@@ -11,7 +11,7 @@ function Get-ReleaseTable() {
 
     $tableBuilder = New-Object -TypeName System.Text.StringBuilder
     if ($HeaderSize -gt 0) {
-        [void]$tableBuilder.Append((New-Object -TypeName System.String -ArgumentList '#',$HeaderSize))
+        [void]$tableBuilder.Append('#' * $HeaderSize)
         [void]$tableBuilder.Append(' ')
     }
     [void]$tableBuilder.Append('Version: ')
@@ -44,6 +44,7 @@ function Get-ReleaseTable() {
 
     return $tableBuilder.ToString()
 }
+
 function Format-ReleaseTokens() {
     param(
         [Parameter(Mandatory = $true)]
