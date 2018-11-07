@@ -1,3 +1,7 @@
+[//]: # (WARNING! This is a file that is automatically generated from the /templates/RELEASES.md.template file.)
+[//]: # (DO NOT edit the RELEASES.md file directly, otherwise its contents will be automatically overwritten from the template.)
+[//]: # (Any intended change to the RELEASES.md file must be made in the /templates/RELEASES.md.template file.)
+
 # Releases
 
 See [checksums](https://github.com/microsoft/vssnapshotdebugger-docker/blob/master/CHECKSUMS) for checksum information for individual files in each release.

@@ -1,3 +1,7 @@
+[//]: # (WARNING! This is a file that is automatically generated from the /templates/README.md.template file.)
+[//]: # (DO NOT edit the README.md file directly, otherwise its contents will be automatically overwritten from the template.)
+[//]: # (Any intended change to the README.md file must be made in the /templates/README.md.template file.)
+
 # Visual Studio Snapshot Debugger Docker Images
 
 This repository contains Dockerfiles that demonstrate how to set up the Visual Studio Snapshot Debugger on Docker images.
