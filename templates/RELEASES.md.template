@@ -1,6 +1,6 @@
 # Releases
 
-See [CHCEKSUMS](https://github.com/microsoft/vssnapshotdebugger-docker/blob/master/CHECKSUMS) for checksums of individual files.
+See [checksums](https://github.com/microsoft/vssnapshotdebugger-docker/blob/master/CHECKSUMS) for checksum information for individual files in each release.
 
 ## Latest Release
 

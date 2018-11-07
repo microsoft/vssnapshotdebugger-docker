@@ -21,12 +21,12 @@ $ArgVersionRegex = [regex]"$ArgVersionPrefix(?<Version>\d+\.\d+\.\d+)"
 $ArgChecksumPrefix = 'ARG VSSNAPSHOTDEBUGGER_SHA512='
 $ArgChecksumRegex = [regex]"$ArgChecksumPrefix[0-9a-f]{128}"
 
-$RepositoryRoot = Get-RepositoryRoot
+$repositoryRoot = Get-RepositoryRoot
 
 $releases = Get-ReleaseData
 
-Get-ChildItem -Path "$RepositoryRoot\$DotNetVersion" -Include Dockerfile -Recurse | ForEach-Object {
-    Push-Location $RepositoryRoot
+Get-ChildItem -Path "$repositoryRoot\$DotNetVersion" -Include Dockerfile -Recurse | ForEach-Object {
+    Push-Location $repositoryRoot
     $dockerfilePath = $_.FullName
     $dockerfileRelativePath = Resolve-Path -Path $dockerfilePath -Relative
     Pop-Location

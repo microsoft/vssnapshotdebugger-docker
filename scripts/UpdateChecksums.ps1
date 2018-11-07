@@ -8,7 +8,7 @@ $VerbosePreference = 'Continue'
 
 Import-Module "$PSScriptRoot\Common.psm1" -Force -Verbose:$false
 
-$RepositoryRoot = Get-RepositoryRoot
+$repositoryRoot = Get-RepositoryRoot
 
 $builder = New-Object -TypeName System.Text.StringBuilder
 
@@ -44,4 +44,4 @@ Get-ReleaseData | Sort-Object -Property "version" -Descending | ForEach-Object {
     }
 }
 
-Set-ContentAndStage -Path "$RepositoryRoot\CHECKSUMS" -Content $builder.ToString() -Stage:$StageChanges
+Set-ContentAndStage -Path "$repositoryRoot\CHECKSUMS" -Content $builder.ToString() -Stage:$StageChanges
