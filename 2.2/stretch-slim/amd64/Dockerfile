@@ -28,8 +28,8 @@ RUN apt-get install -y --no-install-recommends \
         bash unzip
 
 # Install Visual Studio Debugger
-ARG GETVSDBG_SHA512=e5da609ee0a9dcd2d7d33f58b3eb9fe3db8389e08522dd8b4c42a2dc930cd01d1e818476fb4e0d079015dbd07324c8aca36de3e78d361102d2b327a6699f4d65
-RUN curl -SL --output getvsdbg.sh "https://aka.ms/getvsdbgsh" \
+ARG GETVSDBG_SHA512=fe76c7671951d2c0ba254c76d3fd7dc9f90cd329457e89bd277f099904b416578a6346d2b8e5d686f7e7f66463e8830e886cf869ef2d95b5a229324c6e15a649
+RUN curl -SL --output getvsdbg.sh "https://aka.ms/vssnapshotdebugger/preview/getvsdbgsh" \
     && echo "${GETVSDBG_SHA512}  getvsdbg.sh" | sha512sum -c - \
     && bash ./getvsdbg.sh -v latest -l /diag/vsdbg \
     && rm getvsdbg.sh
