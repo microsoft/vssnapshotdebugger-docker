@@ -18,7 +18,7 @@ $latestReleaseTable = Get-ReleaseTable -Release $latestRelease -HeaderSize 3
 $releasesContent = $releasesContent.Replace('${LatestReleaseTable}', $latestReleaseTable)
 
 $previousReleasesBuilder = New-Object -TypeName System.Text.StringBuilder
-$previousReleases = $releases | Select-Object -Skip 1
+$previousReleases = @($releases | Select-Object -Skip 1)
 if ($previousReleases.Count -gt 0) {
     $previousReleases | ForEach-Object {
         $previousRelease = $_

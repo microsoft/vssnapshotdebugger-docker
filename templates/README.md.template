@@ -6,6 +6,19 @@
 
 This repository contains Dockerfiles that demonstrate how to set up the Visual Studio Snapshot Debugger on Docker images.
 
+## What is the Visual Studio Snapshot Debugger?
+
+The Visual Studio Snapshot Debugger is a feature of Visual Studio that allows you to take snapshots and to create log statements of in-production ASP.NET Azure
+applications without interupting them. Please see https://aka.ms/snappoint for more infomration regarding the Visual Studio Snapshot Debugger.
+
+## Dockerfiles
+
+The Dockerfiles are organized according to the ASP.NET Core major and minor version, the OS platform, and the platform architecture.
+For example, the ASP.NET Core 2.2 Alpine 3.8 x64 Dockerfile is located at /2.2/alpine/amd64/Dockerfile. When built, this Dockerfile produces
+an image with Alpine 3.8 x64 as the base with ASP.NET Core 2.2 Runtime and the latest supported Snapshot Debugger backend package.
+
+The Dockerfiles do not take a dependency on the Docker build context, thus they can be built without specifying a build context when executing "docker build".
+
 ## Latest Release
 
 ${LatestReleaseTable}

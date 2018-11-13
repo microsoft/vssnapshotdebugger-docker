@@ -6,13 +6,26 @@
 
 This repository contains Dockerfiles that demonstrate how to set up the Visual Studio Snapshot Debugger on Docker images.
 
+## What is the Visual Studio Snapshot Debugger?
+
+The Visual Studio Snapshot Debugger is a feature of Visual Studio that allows you to take snapshots and to create log statements of in-production ASP.NET Azure
+applications without interupting them. Please see https://aka.ms/snappoint for more infomration regarding the Visual Studio Snapshot Debugger.
+
+## Dockerfiles
+
+The Dockerfiles are organized according to the ASP.NET Core major and minor version, the OS platform, and the platform architecture.
+For example, the ASP.NET Core 2.2 Alpine 3.8 x64 Dockerfile is located at /2.2/alpine/amd64/Dockerfile. When built, this Dockerfile produces
+an image with Alpine 3.8 x64 as the base with ASP.NET Core 2.2 Runtime and the latest supported Snapshot Debugger backend package.
+
+The Dockerfiles do not take a dependency on the Docker build context, thus they can be built without specifying a build context when executing "docker build".
+
 ## Latest Release
 
-### Version: 1.2.1
+### Version: 1.2.2
 File Name | Description
 :---------|:-----------
-[vssnapshotdebugger-1.2.1-linux-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/1.2.1/vssnapshotdebugger-1.2.1-linux-x64.tar.gz) | For glibc based OS - most common
-[vssnapshotdebugger-1.2.1-linux-musl-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/1.2.1/vssnapshotdebugger-1.2.1-linux-musl-x64.tar.gz) | For musl based OS, such as Alpine Linux
+[vssnapshotdebugger-1.2.2-linux-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/1.2.2/vssnapshotdebugger-1.2.2-linux-x64.tar.gz) | For glibc based OS - most common
+[vssnapshotdebugger-1.2.2-linux-musl-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/1.2.2/vssnapshotdebugger-1.2.2-linux-musl-x64.tar.gz) | For musl based OS, such as Alpine Linux
 
 ### Additional Information
 

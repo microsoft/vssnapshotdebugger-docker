@@ -9,3 +9,7 @@ See [checksums](https://github.com/microsoft/vssnapshotdebugger-docker/blob/mast
 ## Latest Release
 
 ${LatestReleaseTable}
+
+## Previous Releases
+
+${PreviousReleaseTables}
