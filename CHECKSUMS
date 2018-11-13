@@ -1,0 +1,11 @@
+Version: 1.2.2
+Hash: SHA512
+
+a46f2a6945271ce5bc4da99b6f0bb0a3d5c15de4e39ca96d8ab9c9e2ad6b89a22774f972b1b7c76de337853cef887e7ff4ca981da25a12141cb7f1c8f72c8d44  vssnapshotdebugger-1.2.2-linux-x64.tar.gz
+2e74a03fb244fb2378f7841d4615f69976ee4af6d5943037d57dc0b3e643bccae6f14b1ac884862040ae70975387586d12861ff2b8520574f2568f12d82b1876  vssnapshotdebugger-1.2.2-linux-musl-x64.tar.gz
+
+Version: 1.2.1
+Hash: SHA512
+
+2de7cd4bd39f6d9ddd171b831ae66b51e37db9b4f609e1748b5eed122215fbfd7e787bb1834a5f2d1e3c6dbdc619094fb49db6d4e0d4af5f71cdcd69d5a17930  vssnapshotdebugger-1.2.1-linux-x64.tar.gz
+2fc3f1c3bacfc7185ad3d415c0145928fed8fb91480fdce2951dabe0e4a3e028a636715d1337f1dc58c23b5d9e83dc5bdc83cbe68e576b3105d5a22b52bdea9f  vssnapshotdebugger-1.2.1-linux-musl-x64.tar.gz
