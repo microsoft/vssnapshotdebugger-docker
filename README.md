@@ -21,11 +21,11 @@ The Dockerfiles do not take a dependency on the Docker build context, thus they 
 
 ## Latest Release
 
-### Version: 1.2.2
+### Version: 2.0.1
 File Name | Description
 :---------|:-----------
-[vssnapshotdebugger-1.2.2-linux-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/1.2.2/vssnapshotdebugger-1.2.2-linux-x64.tar.gz) | For glibc based OS - most common
-[vssnapshotdebugger-1.2.2-linux-musl-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/1.2.2/vssnapshotdebugger-1.2.2-linux-musl-x64.tar.gz) | For musl based OS, such as Alpine Linux
+[vssnapshotdebugger-2.0.1-linux-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.1/vssnapshotdebugger-2.0.1-linux-x64.tar.gz) | For glibc based OS - most common
+[vssnapshotdebugger-2.0.1-linux-musl-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.1/vssnapshotdebugger-2.0.1-linux-musl-x64.tar.gz) | For musl based OS, such as Alpine Linux
 
 ### Additional Information
 

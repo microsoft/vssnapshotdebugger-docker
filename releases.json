@@ -25,5 +25,18 @@
             "uri": "https://aka.ms/vssnapshotdebugger/release/${Version}/vssnapshotdebugger-${Version}-linux-musl-x64.tar.gz",
             "sha512": "2e74a03fb244fb2378f7841d4615f69976ee4af6d5943037d57dc0b3e643bccae6f14b1ac884862040ae70975387586d12861ff2b8520574f2568f12d82b1876"
         }]
+    },{
+        "version": "2.0.1",
+        "files": [{
+            "name": "vssnapshotdebugger-${Version}-linux-x64.tar.gz",
+            "description": "For glibc based OS - most common",
+            "uri": "https://aka.ms/vssnapshotdebugger/release/${Version}/vssnapshotdebugger-${Version}-linux-x64.tar.gz",
+            "sha512": "58d417a6e1d09dc4acfa39dd2c1c801f73a147a3fd931c18daf9908fbeda877c307342497c049fd2864343958b5385c1cc31202ecfe6c8b0b16b64b07866310c"
+        },{
+            "name": "vssnapshotdebugger-${Version}-linux-musl-x64.tar.gz",
+            "description": "For musl based OS, such as Alpine Linux",
+            "uri": "https://aka.ms/vssnapshotdebugger/release/${Version}/vssnapshotdebugger-${Version}-linux-musl-x64.tar.gz",
+            "sha512": "9d695d2ae9db2cf00cca429c798727563931743cfd7762e19002b397616e7a830f22d821b33a28550fa51152d7f55336bf284bf57aae03ada746605414be1c34"
+        }]
     }]
 }
