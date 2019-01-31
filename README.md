@@ -63,5 +63,3 @@ If you have any problems with or questions about this repository, please contact
 ## Licenses
 
 - [Repository License](https://github.com/microsoft/vssnapshotdebugger-docker/blob/master/LICENSE)
-
-Usage of the Snapshot Debugger and Visual Studio Debugger distributable files and components are subject to the [licensing and terms defined by Visual Studio](https://visualstudio.microsoft.com/license-terms/mlt552233/).
