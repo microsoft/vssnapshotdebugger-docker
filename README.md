@@ -15,17 +15,23 @@ applications without interupting them. Please see https://aka.ms/snappoint for m
 
 The Dockerfiles are organized according to the ASP.NET Core major and minor version, the OS platform, and the platform architecture.
 For example, the ASP.NET Core 2.2 Alpine 3.8 x64 Dockerfile is located at /2.2/alpine/amd64/Dockerfile. When built, this Dockerfile produces
-an image with Alpine 3.8 x64 as the base with ASP.NET Core 2.2 Runtime and the latest supported Snapshot Debugger backend package.
+an image with Alpine 3.8 x64 as the base with ASP.NET Core 2.2 Runtime and the latest supported Snapshot Debugger backend package and vsdbg package.
 
 The Dockerfiles do not take a dependency on the Docker build context, thus they can be built without specifying a build context when executing "docker build".
 
+### VsDbg Version Compatibility Table
+
+Pseudo-Version | Visual Studio Version
+:--------------|:-----------
+vs2017u5       | 2019
+
 ## Latest Release
 
-### Version: 2.0.1
+### Version: 2.0.8
 File Name | Description
 :---------|:-----------
-[vssnapshotdebugger-2.0.1-linux-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.1/vssnapshotdebugger-2.0.1-linux-x64.tar.gz) | For glibc based OS - most common
-[vssnapshotdebugger-2.0.1-linux-musl-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.1/vssnapshotdebugger-2.0.1-linux-musl-x64.tar.gz) | For musl based OS, such as Alpine Linux
+[vssnapshotdebugger-2.0.8-linux-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.8/vssnapshotdebugger-2.0.8-linux-x64.tar.gz) | For glibc based OS - most common
+[vssnapshotdebugger-2.0.8-linux-musl-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.8/vssnapshotdebugger-2.0.8-linux-musl-x64.tar.gz) | For musl based OS, such as Alpine Linux
 
 ### Additional Information
 

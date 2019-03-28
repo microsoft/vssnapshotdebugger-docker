@@ -6,11 +6,12 @@ RUN apt-get update \
         curl libxml2 uuid libunwind8
 
 # Install Visual Studio Snapshot Debugger
-ARG VSSNAPSHOTDEBUGGER_VERSION=2.0.1
-ARG VSSNAPSHOTDEBUGGER_SHA512=58d417a6e1d09dc4acfa39dd2c1c801f73a147a3fd931c18daf9908fbeda877c307342497c049fd2864343958b5385c1cc31202ecfe6c8b0b16b64b07866310c
+ARG VSSNAPSHOTDEBUGGER_VERSION=2.0.8
+ARG VSSNAPSHOTDEBUGGER_SHA512=18cc72ca2bdb291fb126b11ec705e270ad11e0b053010afb19d0252d3f2911a02af7496adf89eec883b9183771867b234902db6a02926ad1f0f736cba5e71e77
 RUN curl -SL --output vssnapshotdebugger.tar.gz "https://aka.ms/vssnapshotdebugger/release/${VSSNAPSHOTDEBUGGER_VERSION}/vssnapshotdebugger-${VSSNAPSHOTDEBUGGER_VERSION}-linux-x64.tar.gz" \
     && echo "${VSSNAPSHOTDEBUGGER_SHA512}  vssnapshotdebugger.tar.gz" | sha512sum -c - \
     && mkdir -p /diag \
+    && mkdir -p /tmp/diag \
     && tar -pzxf vssnapshotdebugger.tar.gz -C /diag \
     && rm vssnapshotdebugger.tar.gz
 
@@ -28,10 +29,9 @@ RUN apt-get install -y --no-install-recommends \
         bash unzip
 
 # Install Visual Studio Debugger
-ARG GETVSDBG_SHA512=fe76c7671951d2c0ba254c76d3fd7dc9f90cd329457e89bd277f099904b416578a6346d2b8e5d686f7e7f66463e8830e886cf869ef2d95b5a229324c6e15a649
-RUN curl -SL --output getvsdbg.sh "https://aka.ms/vssnapshotdebugger/preview/getvsdbgsh" \
-    && echo "${GETVSDBG_SHA512}  getvsdbg.sh" | sha512sum -c - \
-    && bash ./getvsdbg.sh -v latest -l /diag/vsdbg \
+# Check the repo's README for version compatibility with Visual Studio
+RUN curl -SL --output getvsdbg.sh "https://aka.ms/getvsdbgsh" \
+    && bash ./getvsdbg.sh -v vs2017u5 -l /diag/vsdbg \
     && rm getvsdbg.sh
 
 # Remove package lists to save space; can be restored with 'apt-get update'
