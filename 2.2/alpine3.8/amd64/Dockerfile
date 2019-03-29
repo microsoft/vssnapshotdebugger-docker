@@ -5,11 +5,12 @@ RUN apk update \
     && apk add libxml2 libuuid libunwind
 
 # Install Visual Studio Snapshot Debugger
-ARG VSSNAPSHOTDEBUGGER_VERSION=2.0.1
-ARG VSSNAPSHOTDEBUGGER_SHA512=9d695d2ae9db2cf00cca429c798727563931743cfd7762e19002b397616e7a830f22d821b33a28550fa51152d7f55336bf284bf57aae03ada746605414be1c34
+ARG VSSNAPSHOTDEBUGGER_VERSION=2.0.8
+ARG VSSNAPSHOTDEBUGGER_SHA512=1fecc5e198fcfd35a743f1245db0bdede68f3b2e65db1b808e7091151d46d8db106324a1fac4bcdaa3b5e38ac4e50cbcd8c1a488bbd2764ead8af24787f5b3dd
 RUN wget -O vssnapshotdebugger.tar.gz "https://aka.ms/vssnapshotdebugger/release/${VSSNAPSHOTDEBUGGER_VERSION}/vssnapshotdebugger-${VSSNAPSHOTDEBUGGER_VERSION}-linux-musl-x64.tar.gz" \
     && echo "${VSSNAPSHOTDEBUGGER_SHA512}  vssnapshotdebugger.tar.gz" | sha512sum -c - \
     && mkdir -p /diag \
+    && mkdir -p /tmp/diag \
     && tar -pzxf vssnapshotdebugger.tar.gz -C /diag \
     && rm vssnapshotdebugger.tar.gz
 
@@ -26,8 +27,7 @@ ENV MicrosoftInstrumentationEngine_FileLogPath=/tmp/diag/log.txt
 RUN apk add bash unzip
 
 # Install Visual Studio Debugger
-ARG GETVSDBG_SHA512=fe76c7671951d2c0ba254c76d3fd7dc9f90cd329457e89bd277f099904b416578a6346d2b8e5d686f7e7f66463e8830e886cf869ef2d95b5a229324c6e15a649
-RUN wget -O getvsdbg.sh "https://aka.ms/vssnapshotdebugger/preview/getvsdbgsh" \
-    && echo "${GETVSDBG_SHA512}  getvsdbg.sh" | sha512sum -c - \
-    && bash ./getvsdbg.sh -v latest -l /diag/vsdbg \
+# Check the repo's README for vsdbg version compatibility with Visual Studio
+RUN wget -O getvsdbg.sh "https://aka.ms/getvsdbgsh" \
+    && bash ./getvsdbg.sh -v vs2017u5 -l /diag/vsdbg \
     && rm getvsdbg.sh

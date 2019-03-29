@@ -8,13 +8,19 @@ See [checksums](https://github.com/microsoft/vssnapshotdebugger-docker/blob/mast
 
 ## Latest Release
 
+### Version: 2.0.8
+File Name | Description
+:---------|:-----------
+[vssnapshotdebugger-2.0.8-linux-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.8/vssnapshotdebugger-2.0.8-linux-x64.tar.gz) | For glibc based OS - most common
+[vssnapshotdebugger-2.0.8-linux-musl-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.8/vssnapshotdebugger-2.0.8-linux-musl-x64.tar.gz) | For musl based OS, such as Alpine Linux
+
+## Previous Releases
+
 ### Version: 2.0.1
 File Name | Description
 :---------|:-----------
 [vssnapshotdebugger-2.0.1-linux-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.1/vssnapshotdebugger-2.0.1-linux-x64.tar.gz) | For glibc based OS - most common
 [vssnapshotdebugger-2.0.1-linux-musl-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.1/vssnapshotdebugger-2.0.1-linux-musl-x64.tar.gz) | For musl based OS, such as Alpine Linux
-
-## Previous Releases
 
 ### Version: 1.2.2
 File Name | Description
