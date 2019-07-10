@@ -38,13 +38,13 @@ Get-ChildItem -Path "$repositoryRoot\$DotNetVersion" -Include Dockerfile -Recurs
     if (!$versionMatch.Success) {
         Write-Error "Unable to determine Snapshot Debugger version in Dockerfile '$dockerfileRelativePath'."
     }
-    $version = $versionMatch.Groups['Version'].Value
+    $version = [System.Version]$versionMatch.Groups['Version'].Value
 
     # Update Snapshot Debugger version
     if ($NewSnapshotDebuggerVersion) {
         Write-Verbose "Updating Snapshot Debugger version to ${NewSnapshotDebuggerVersion} in Dockerfile '$dockerfileRelativePath'."
         $content = $ArgVersionRegex.Replace($content, "${ArgVersionPrefix}${NewSnapshotDebuggerVersion}")
-        $version = $NewSnapshotDebuggerVersion
+        $version = [System.Version]$NewSnapshotDebuggerVersion
     }
 
     # Determine which release the Dockerfile is referencing

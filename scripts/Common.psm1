@@ -61,7 +61,11 @@ function Format-ReleaseTokens() {
 
 function Get-ReleaseData() {
     $releasesPath = Join-Path -Path (Get-RepositoryRoot) -ChildPath "releases.json" -Resolve
-    return (Get-Content -Path $releasesPath -Raw | ConvertFrom-Json).releases
+    $releases = (Get-Content -Path $releasesPath -Raw | ConvertFrom-Json).releases
+    $releases | ForEach-Object {
+        $_.version = [System.Version]$_.version
+    }
+    return $releases
 }
 
 function Get-RepositoryRoot() {

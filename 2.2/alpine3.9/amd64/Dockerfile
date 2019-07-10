@@ -1,14 +1,13 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-stretch-slim
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine3.9
 
 # Install Visual Studio Snapshot Debugger prerequisites
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        curl libxml2 uuid libunwind8
+RUN apk update \
+    && apk add libxml2 libuuid libunwind
 
 # Install Visual Studio Snapshot Debugger
 ARG VSSNAPSHOTDEBUGGER_VERSION=2.0.16
-ARG VSSNAPSHOTDEBUGGER_SHA512=c4892f9779ab934167a44c3b94ef61e7c9aa5c4912911b0d3a63aa477369d0019d5ca6d80fdfd5e2ae0e917d1c0bb07311aabe1d00f15c9564a6ac26aa5569b4
-RUN curl -SL --output vssnapshotdebugger.tar.gz "https://aka.ms/vssnapshotdebugger/release/${VSSNAPSHOTDEBUGGER_VERSION}/vssnapshotdebugger-${VSSNAPSHOTDEBUGGER_VERSION}-linux-x64.tar.gz" \
+ARG VSSNAPSHOTDEBUGGER_SHA512=59f9406dbc397d6ca0dcb4f885c36f6c2d0ee28bee8386c11cf57dcae91fb4a04f625b72ce3949f5194dfad8c1b1e4c82edd09054a3f74304d4608476a3304d9
+RUN wget -O vssnapshotdebugger.tar.gz "https://aka.ms/vssnapshotdebugger/release/${VSSNAPSHOTDEBUGGER_VERSION}/vssnapshotdebugger-${VSSNAPSHOTDEBUGGER_VERSION}-linux-musl-x64.tar.gz" \
     && echo "${VSSNAPSHOTDEBUGGER_SHA512}  vssnapshotdebugger.tar.gz" | sha512sum -c - \
     && mkdir -p /diag \
     && mkdir -p /tmp/diag \
@@ -23,14 +22,10 @@ ENV MicrosoftInstrumentationEngine_FileLog=Errors
 ENV MicrosoftInstrumentationEngine_FileLogPath=/tmp/diag/log.txt
 
 # Install Visual Studio Debugger script prerequisites
-RUN apt-get install -y --no-install-recommends \
-    unzip
+RUN apk add unzip
 
 # Install Visual Studio Debugger
-# Check the repo's README for version compatibility with Visual Studio
-RUN curl -SL --output getvsdbg.sh "https://aka.ms/getvsdbgsh" \
+# Check the repo's README for vsdbg version compatibility with Visual Studio
+RUN wget -O getvsdbg.sh "https://aka.ms/getvsdbgsh" \
     && sh ./getvsdbg.sh -v vs2019 -l /diag/vsdbg \
     && rm getvsdbg.sh
-
-# Remove package lists to save space; can be restored with 'apt-get update'
-RUN rm -rf /var/lib/apt/lists/*
