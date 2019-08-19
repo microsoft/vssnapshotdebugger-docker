@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2-alpine3.9
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-alpine3.9
 
 # Install Visual Studio Snapshot Debugger prerequisites
 RUN apk update \

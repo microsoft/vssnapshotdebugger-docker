@@ -5,8 +5,8 @@ RUN apk update \
     && apk add libxml2 libuuid libunwind
 
 # Install Visual Studio Snapshot Debugger
-ARG VSSNAPSHOTDEBUGGER_VERSION=2.0.16
-ARG VSSNAPSHOTDEBUGGER_SHA512=59f9406dbc397d6ca0dcb4f885c36f6c2d0ee28bee8386c11cf57dcae91fb4a04f625b72ce3949f5194dfad8c1b1e4c82edd09054a3f74304d4608476a3304d9
+ARG VSSNAPSHOTDEBUGGER_VERSION=2.0.19
+ARG VSSNAPSHOTDEBUGGER_SHA512=3f53322be3b5cecfdeae9b2be1e7fe9d5291fc11b93e2c5696f54276a2e2883e0b67a0aa5bead29592f13edfe561c2e4496b5703a60768cd42c7305e218a4ef2
 RUN wget -O vssnapshotdebugger.tar.gz "https://aka.ms/vssnapshotdebugger/release/${VSSNAPSHOTDEBUGGER_VERSION}/vssnapshotdebugger-${VSSNAPSHOTDEBUGGER_VERSION}-linux-musl-x64.tar.gz" \
     && echo "${VSSNAPSHOTDEBUGGER_SHA512}  vssnapshotdebugger.tar.gz" | sha512sum -c - \
     && mkdir -p /diag \

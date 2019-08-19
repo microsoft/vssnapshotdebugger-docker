@@ -6,8 +6,8 @@ RUN apt-get update \
         curl libxml2 uuid libunwind8
 
 # Install Visual Studio Snapshot Debugger
-ARG VSSNAPSHOTDEBUGGER_VERSION=2.0.16
-ARG VSSNAPSHOTDEBUGGER_SHA512=c4892f9779ab934167a44c3b94ef61e7c9aa5c4912911b0d3a63aa477369d0019d5ca6d80fdfd5e2ae0e917d1c0bb07311aabe1d00f15c9564a6ac26aa5569b4
+ARG VSSNAPSHOTDEBUGGER_VERSION=2.0.19
+ARG VSSNAPSHOTDEBUGGER_SHA512=ff8d25e84a9d5c08b4ee304bc8bea938a5bf4bb718d3d8d75693e8f5ff413d663f99ea185836f78bca59ec33a3ed22896ece911fe0a18c237e99363e2df565ab
 RUN curl -SL --output vssnapshotdebugger.tar.gz "https://aka.ms/vssnapshotdebugger/release/${VSSNAPSHOTDEBUGGER_VERSION}/vssnapshotdebugger-${VSSNAPSHOTDEBUGGER_VERSION}-linux-x64.tar.gz" \
     && echo "${VSSNAPSHOTDEBUGGER_SHA512}  vssnapshotdebugger.tar.gz" | sha512sum -c - \
     && mkdir -p /diag \
