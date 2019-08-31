@@ -1,3 +1,9 @@
+Version: 2.0.19
+Hash: SHA512
+
+ff8d25e84a9d5c08b4ee304bc8bea938a5bf4bb718d3d8d75693e8f5ff413d663f99ea185836f78bca59ec33a3ed22896ece911fe0a18c237e99363e2df565ab  vssnapshotdebugger-2.0.19-linux-x64.tar.gz
+3f53322be3b5cecfdeae9b2be1e7fe9d5291fc11b93e2c5696f54276a2e2883e0b67a0aa5bead29592f13edfe561c2e4496b5703a60768cd42c7305e218a4ef2  vssnapshotdebugger-2.0.19-linux-musl-x64.tar.gz
+
 Version: 2.0.16
 Hash: SHA512
 
