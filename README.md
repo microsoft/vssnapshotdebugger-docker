@@ -27,11 +27,11 @@ vs2017u5       | 2019
 
 ## Latest Release
 
-### Version: 2.0.19
+### Version: 2.0.21
 File Name | Description
 :---------|:-----------
-[vssnapshotdebugger-2.0.19-linux-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.19/vssnapshotdebugger-2.0.19-linux-x64.tar.gz) | For glibc based OS - most common
-[vssnapshotdebugger-2.0.19-linux-musl-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.19/vssnapshotdebugger-2.0.19-linux-musl-x64.tar.gz) | For musl based OS, such as Alpine Linux
+[vssnapshotdebugger-2.0.21-linux-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.21/vssnapshotdebugger-2.0.21-linux-x64.tar.gz) | For glibc based OS - most common
+[vssnapshotdebugger-2.0.21-linux-musl-x64.tar.gz](https://aka.ms/vssnapshotdebugger/release/2.0.21/vssnapshotdebugger-2.0.21-linux-musl-x64.tar.gz) | For musl based OS, such as Alpine Linux
 
 ### Additional Information
 
