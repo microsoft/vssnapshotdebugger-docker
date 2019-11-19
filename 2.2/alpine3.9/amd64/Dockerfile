@@ -20,6 +20,8 @@ ENV CORECLR_PROFILER={324F817A-7420-4E6D-B3C1-143FBED6D855}
 ENV CORECLR_PROFILER_PATH_64=/diag/Instrumentation64/libInstrumentationEngine.so
 ENV MicrosoftInstrumentationEngine_FileLog=Errors
 ENV MicrosoftInstrumentationEngine_FileLogPath=/tmp/diag/log.txt
+ENV MicrosoftProductionDiagnostics_RuntimeFolder=/diag/Runtime
+ENV MicrosoftProductionDiagnostics_UtilsPath=/diag/Utils/ProductionBreakpointsUtils.dll
 
 # Install Visual Studio Debugger script prerequisites
 RUN apk add unzip
