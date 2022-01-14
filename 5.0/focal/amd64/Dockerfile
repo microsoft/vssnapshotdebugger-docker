@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:5.0-focal
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-focal-amd64
 
 # Install Visual Studio Snapshot Debugger prerequisites
 RUN apt-get update \

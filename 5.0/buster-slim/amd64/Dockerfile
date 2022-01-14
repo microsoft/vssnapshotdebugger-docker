@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim
+FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim-amd64
 
 # Install Visual Studio Snapshot Debugger prerequisites
 RUN apt-get update \
