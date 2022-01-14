@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine3.14
 
 # Install Visual Studio Snapshot Debugger prerequisites
 RUN apk update \
-    && apk add libxml2 libuuid libunwind8
+    && apk add libxml2 libuuid libunwind
 
 # Install Visual Studio Snapshot Debugger
 ARG VSSNAPSHOTDEBUGGER_VERSION=2.0.26
