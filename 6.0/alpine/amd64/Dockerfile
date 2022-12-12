@@ -27,5 +27,5 @@ ENV MicrosoftProductionDiagnostics_UtilsPath=/diag/Utils/ProductionBreakpointsUt
 # Install Visual Studio Debugger
 # Check the repo's README for vsdbg version compatibility with Visual Studio
 RUN wget -O getvsdbg.sh "https://aka.ms/getvsdbgsh" \
-    && sh ./getvsdbg.sh -v 17.2.10518.1 -l /diag/vsdbg \
+    && sh ./getvsdbg.sh -v vs2019 -l /diag/vsdbg \
     && rm getvsdbg.sh
