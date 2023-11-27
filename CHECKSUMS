@@ -1,3 +1,9 @@
+Version: 2.0.31
+Hash: SHA512
+
+f0b6c57ae9003897961b9651f61792bb54c715475aacc341fdcf5622d46e5a603f4ab5936ed2e0c132d9e1b829a830cccf56f0ae3f52264ae6ecce44822fe608  vssnapshotdebugger-2.0.31-linux-x64.tar.gz
+943b08a83f2abe31c56a52c580a76f0b9fde13f5839d14c682b85cdcd9b8dd78426d4bc71e261c0ba3cbb1db1536906eccee6038d34d02878a81fa5d8ae13110  vssnapshotdebugger-2.0.31-linux-musl-x64.tar.gz
+
 Version: 2.0.27
 Hash: SHA512
 
