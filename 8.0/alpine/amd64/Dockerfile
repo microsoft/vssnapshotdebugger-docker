@@ -1,8 +1,9 @@
-FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine-amd64
+FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine-amd64
 
 # Install Visual Studio Snapshot Debugger prerequisites
 RUN apk update \
     && apk add \
+        libintl \
         libunwind \
         libuuid \
         libxml2
